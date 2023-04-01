@@ -11,15 +11,16 @@ const todoList = () => {
       let empty=[],status="[ ]";
       for(let i of all){
         if(i.dueDate===yesterday){
-            if(i.completed===true){
-                status="[x]"
-            }
-            empty.push(`${status} ${i.title} ${i.dueDate}`)
-            status="[ ]"
+          if(i.completed===true){
+            status="[x]"
+          }
+          empty.push(`${status} ${i.title} ${i.dueDate}`)
+          status="[ ]"
         }
       }
-      return empty
+      return empty;
     }
+    
   
     const dueToday = () => {
         let empty=[],status="[ ]";
